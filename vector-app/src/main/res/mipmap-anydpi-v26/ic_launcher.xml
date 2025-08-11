@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background: Use your custom color -->
     <background android:drawable="@drawable/ic_launcher_background" />
-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
-    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
+    
+    <!-- Foreground: Use inset to add padding -->
+    <foreground android:drawable="@drawable/ic_launcher_foreground_inset" />
+    
+    <!-- Monochrome: Use inset for system themes -->
+    <monochrome android:drawable="@drawable/ic_launcher_foreground_inset" />
 </adaptive-icon>
