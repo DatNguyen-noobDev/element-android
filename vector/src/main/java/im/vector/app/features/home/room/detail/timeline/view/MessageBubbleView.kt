@@ -59,18 +59,26 @@ class MessageBubbleView @JvmOverloads constructor(
         super.onFinishInflate()
         views = ViewMessageBubbleBinding.bind(this)
         val currentLayoutDirection = DefaultLocaleProvider(resources).getLayoutDirectionFromCurrentLocale()
+        
+        // Đảm bảo message của mình (outgoing) luôn nằm bên phải
+        // và message của người khác (incoming) luôn nằm bên trái
         val layoutDirectionToSet = if (isIncoming) {
+            // Incoming message: giữ nguyên layout direction hiện tại
             currentLayoutDirection
         } else {
+            // Outgoing message: đảo ngược layout direction để đẩy sang phải
             if (currentLayoutDirection == View.LAYOUT_DIRECTION_LTR) {
                 View.LAYOUT_DIRECTION_RTL
             } else {
                 View.LAYOUT_DIRECTION_LTR
             }
         }
+        
+        // Áp dụng layout direction cho các container
         views.informationBottom.layoutDirection = layoutDirectionToSet
         views.messageThreadSummaryContainer.layoutDirection = layoutDirectionToSet
         views.bubbleWrapper.layoutDirection = layoutDirectionToSet
+        // Giữ nguyên layout direction cho bubble view để nội dung không bị đảo ngược
         views.bubbleView.layoutDirection = currentLayoutDirection
 
         bubbleDrawable = MaterialShapeDrawable()
@@ -155,6 +163,7 @@ class MessageBubbleView @JvmOverloads constructor(
 
     private fun TimelineMessageLayout.Bubble.setMargins() = apply {
         if (isIncoming) {
+            // Incoming message: margin bên trái để tạo khoảng cách với avatar
             views.messageEndGuideline.updateLayoutParams<LayoutParams> {
                 marginEnd = resources.getDimensionPixelSize(im.vector.lib.ui.styles.R.dimen.chat_bubble_margin_end)
             }
@@ -162,6 +171,7 @@ class MessageBubbleView @JvmOverloads constructor(
                 marginStart = resources.getDimensionPixelSize(im.vector.lib.ui.styles.R.dimen.chat_bubble_margin_start)
             }
         } else {
+            // Outgoing message: margin bên phải để đẩy message sang phải
             views.messageEndGuideline.updateLayoutParams<LayoutParams> {
                 marginEnd = resources.getDimensionPixelSize(im.vector.lib.ui.styles.R.dimen.chat_bubble_margin_start)
             }

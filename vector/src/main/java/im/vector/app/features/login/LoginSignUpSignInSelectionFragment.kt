@@ -36,6 +36,14 @@ class LoginSignUpSignInSelectionFragment :
         super.onViewCreated(view, savedInstanceState)
 
         setupViews()
+        
+        // Ensure login flow is retrieved when this fragment is shown
+        withState(loginViewModel) { state ->
+            if (state.homeServerUrl.isNullOrEmpty() && !state.homeServerUrlFromUser.isNullOrEmpty()) {
+                // If we have homeServerUrlFromUser but not homeServerUrl, we need to get the login flow
+                loginViewModel.handle(LoginAction.UpdateHomeServer(state.homeServerUrlFromUser))
+            }
+        }
     }
 
     private fun setupViews() {
@@ -110,6 +118,7 @@ class LoginSignUpSignInSelectionFragment :
             )
                     ?.let { openInCustomTab(it) }
         } else {
+            // Always proceed with registration, let the ViewModel handle the login flow
             loginViewModel.handle(LoginAction.UpdateSignMode(SignMode.SignUp))
         }
     }

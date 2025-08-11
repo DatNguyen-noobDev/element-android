@@ -208,6 +208,7 @@ class FtueAuthVariant(
                         FtueAuthUseCaseFragment::class.java,
                         option = commonOption
                 )
+                // onStartCombinedRegister()
             }
             OnboardingViewEvents.OpenCombinedRegister -> onStartCombinedRegister()
             is OnboardingViewEvents.OnAccountCreated -> onAccountCreated()
@@ -478,11 +479,12 @@ class FtueAuthVariant(
 
     private fun onAccountCreated() {
         activity.supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
-        activity.replaceFragment(
-                views.loginFragmentContainer,
-                FtueAuthAccountCreatedFragment::class.java,
-                useCustomAnimation = true
-        )
+        // activity.replaceFragment(
+        //         views.loginFragmentContainer,
+        //         FtueAuthAccountCreatedFragment::class.java,
+        //         useCustomAnimation = true
+        // )
+        navigateToHome()
     }
 
     private fun navigateToHome() {
@@ -515,11 +517,12 @@ class FtueAuthVariant(
 
     private fun onPersonalizationComplete() {
         activity.supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
-        activity.replaceFragment(
-                views.loginFragmentContainer,
-                FtueAuthPersonalizationCompleteFragment::class.java,
-                useCustomAnimation = true
-        )
+        // activity.replaceFragment(
+        //         views.loginFragmentContainer,
+        //         FtueAuthPersonalizationCompleteFragment::class.java,
+        //         useCustomAnimation = true
+        // )
+        navigateToHome()
     }
 
     private fun addRegistrationStageFragmentToBackstack(fragmentClass: Class<out Fragment>, params: Parcelable? = null, allowStateLoss: Boolean = false) {

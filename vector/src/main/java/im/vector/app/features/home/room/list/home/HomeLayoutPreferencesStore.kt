@@ -30,11 +30,13 @@ class HomeLayoutPreferencesStore @Inject constructor(
     private val isAZOrderingEnabled = booleanPreferencesKey("SETTINGS_PREFERENCES_USE_AZ_ORDER")
 
     val areRecentsEnabledFlow: Flow<Boolean> = context.dataStore.data
-            .map { preferences -> preferences[areRecentsEnbabled].orFalse() }
+            // .map { preferences -> preferences[areRecentsEnbabled].orFalse() }
+            .map { preferences -> preferences[areRecentsEnbabled] ?: true } //《》
             .distinctUntilChanged()
 
     val areFiltersEnabledFlow: Flow<Boolean> = context.dataStore.data
-            .map { preferences -> preferences[areFiltersEnabled].orFalse() }
+            // .map { preferences -> preferences[areFiltersEnabled].orFalse() }
+            .map { preferences -> preferences[areFiltersEnabled] ?: true } // 《》
             .distinctUntilChanged()
 
     val isAZOrderingEnabledFlow: Flow<Boolean> = context.dataStore.data

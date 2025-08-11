@@ -32,7 +32,6 @@
             android:targetActivity="im.vector.app.features.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
@@ -41,9 +40,7 @@
                 android:resource="@xml/shortcuts" />
         </activity-alias>
 
-
         <!-- Providers -->
-
         <!-- Remove WorkManagerInitializer Provider because we are using on-demand initialization of WorkManager-->
         <provider
             android:name="androidx.startup.InitializationProvider"

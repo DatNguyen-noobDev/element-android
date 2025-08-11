@@ -16,6 +16,7 @@
 rust-sdk/target/*
 rust-sdk/src/uniffi/*
 Cargo.lock
+/library
 
 /tmp
 /fastlane/private

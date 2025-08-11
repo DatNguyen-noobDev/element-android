@@ -210,7 +210,8 @@ class LoginFragment :
     }
 
     private fun setupButtons(state: LoginViewState) {
-        views.forgetPasswordButton.isVisible = state.signMode == SignMode.SignIn
+        // views.forgetPasswordButton.isVisible = state.signMode == SignMode.SignIn
+        views.forgetPasswordButton.isVisible = false
 
         views.loginSubmit.text = getString(
                 when (state.signMode) {

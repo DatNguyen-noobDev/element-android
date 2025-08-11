@@ -61,6 +61,7 @@
 
         <TextView
             android:id="@+id/chooseYourServerHeader"
+            android:visibility="gone"
             style="@style/Widget.Vector.TextView.Caption"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -75,6 +76,7 @@
 
         <TextView
             android:id="@+id/selectedServerName"
+            android:visibility="gone"
             style="@style/Widget.Vector.TextView.Subtitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -88,6 +90,7 @@
 
         <TextView
             android:id="@+id/selectedServerDescription"
+            android:visibility="gone"
             style="@style/Widget.Vector.TextView.Micro"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -100,6 +103,7 @@
 
         <Button
             android:id="@+id/editServerButton"
+            android:visibility="gone"
             style="@style/Widget.Vector.Button.Outlined"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -114,6 +118,7 @@
 
         <Space
             android:id="@+id/serverSelectionSpacing"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@id/loginInput"
@@ -121,6 +126,7 @@
             app:layout_constraintTop_toBottomOf="@id/selectedServerDescription" />
 
         <View
+            android:visibility="gone"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="?vctr_content_quaternary"

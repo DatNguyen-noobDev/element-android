@@ -59,6 +59,7 @@ import org.matrix.android.sdk.api.failure.isRegistrationDisabled
 import org.matrix.android.sdk.api.failure.isUsernameInUse
 import org.matrix.android.sdk.api.failure.isWeakPassword
 import reactivecircus.flowbinding.android.widget.textChanges
+import timber.log.Timber
 import javax.inject.Inject
 
 private const val MINIMUM_PASSWORD_LENGTH = 8
@@ -199,11 +200,29 @@ class FtueAuthCombinedRegisterFragment :
         }
 
         views.createAccountEntryFooter.text = when {
-            state.registrationState.isUserNameAvailable -> getString(
-                    CommonStrings.ftue_auth_create_account_username_entry_footer,
-                    state.registrationState.selectedMatrixId
-            )
-
+            state.registrationState.isUserNameAvailable -> {
+                val matrixId = state.registrationState.selectedMatrixId
+                val homeServerUrl = state.selectedHomeserver.userFacingUrl
+                
+                Timber.d("setupUi: matrixId=$matrixId, homeServerUrl=$homeServerUrl")
+                
+                if (!matrixId.isNullOrEmpty()) {
+                    getString(
+                            CommonStrings.ftue_auth_create_account_username_entry_footer,
+                            matrixId
+                    )
+                } else {
+                    // Fallback if selectedMatrixId is null or empty
+                    if (!homeServerUrl.isNullOrEmpty()) {
+                        getString(
+                                CommonStrings.ftue_auth_create_account_username_entry_footer,
+                                "@username:${homeServerUrl.toReducedUrl()}"
+                        )
+                    } else {
+                        ""
+                    }
+                }
+            }
             else -> ""
         }
 

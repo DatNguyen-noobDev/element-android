@@ -34,6 +34,15 @@ class HomeLayoutSettingBottomDialogFragment : VectorBaseBottomSheetDialogFragmen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // 《
+        // views.homeLayoutSettingsRecents.isChecked = true
+        // views.homeLayoutSettingsFilters.isChecked = true
+        // trackRecentsStateEvent(true)
+        // trackFiltersStateEvent(true)
+        // setRecentsEnabled(true)
+        // setFiltersEnabled(true)
+        // 》
+
         viewLifecycleOwner.lifecycleScope.launch {
             views.homeLayoutSettingsRecents.isChecked = preferencesStore.areRecentsEnabledFlow.first()
             views.homeLayoutSettingsFilters.isChecked = preferencesStore.areFiltersEnabledFlow.first()

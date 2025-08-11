@@ -41,6 +41,9 @@ class AnalyticsOptInFragment :
         super.onViewCreated(view, savedInstanceState)
         setupLink()
         setupListeners()
+        // 《
+        viewModel.handle(AnalyticsConsentViewActions.SetUserConsent(userConsent = true))
+        // 》
     }
 
     private fun setupListeners() {
