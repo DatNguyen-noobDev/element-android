@@ -33,15 +33,10 @@ abstract class UserDirectoryUserItem : VectorEpoxyModel<UserDirectoryUserItem.Ho
     override fun bind(holder: Holder) {
         super.bind(holder)
         holder.view.onClick(clickListener)
-        // If name is empty, use userId as name and force it being centered
-        if (matrixItem.displayName.isNullOrEmpty()) {
-            holder.userIdView.visibility = View.GONE
-            holder.nameView.text = matrixItem.id
-        } else {
-            holder.userIdView.visibility = View.VISIBLE
-            holder.nameView.text = matrixItem.displayName
-            holder.userIdView.text = matrixItem.id
-        }
+        // Always hide userId and show only display name
+        holder.userIdView.visibility = View.GONE
+        // If name is empty, use userId as name
+        holder.nameView.text = matrixItem.displayName ?: matrixItem.id
         renderSelection(holder, selected)
     }
 
