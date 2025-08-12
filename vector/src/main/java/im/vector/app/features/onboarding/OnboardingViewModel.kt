@@ -238,13 +238,16 @@ class OnboardingViewModel @AssistedInject constructor(
     private fun continueToPageAfterSplash(onboardingFlow: OnboardingFlow) {
         when (onboardingFlow) {
             OnboardingFlow.SignUp -> {
-                _viewEvents.post(
-                        if (vectorFeatures.isOnboardingUseCaseEnabled()) {
-                            OnboardingViewEvents.OpenUseCaseSelection
-                        } else {
-                            OnboardingViewEvents.OpenServerSelection
-                        }
-                )
+                // Auto-skip survey and server selection, go directly to registration
+                // Set use case to SKIP automatically and use configured server
+                setState { 
+                    copy(
+                        useCase = FtueUseCase.SKIP,
+                        serverType = ServerType.Other
+                    ) 
+                }
+                // Use the configured homeserver directly
+                handle(OnboardingAction.HomeServerChange.SelectHomeServer(defaultHomeserverUrl))
             }
             OnboardingFlow.SignIn -> when {
                 vectorFeatures.isOnboardingCombinedLoginEnabled() -> {

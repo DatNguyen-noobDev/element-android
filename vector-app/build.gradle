@@ -248,7 +248,7 @@ android {
         debug {
             applicationIdSuffix ".debug"
             signingConfig signingConfigs.debug
-            resValue "string", "app_name", "Element - dbg"
+            resValue "string", "app_name", "Yoush - dbg"
 
             if (project.hasProperty("coverage")) {
                 testCoverageEnabled = project.coverage == "true"
