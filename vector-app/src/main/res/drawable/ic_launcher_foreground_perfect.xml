@@ -2,6 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Optimized adaptive icon configuration -->
     <!-- Square icon centered in circle with safe margins -->
+    <!-- Using 56dp to prevent excessive zoom and preserve details -->
     <item android:drawable="@mipmap/ic_launcher_foreground"
           android:gravity="center"
           android:width="56dp"

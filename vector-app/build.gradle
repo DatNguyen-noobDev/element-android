@@ -256,7 +256,7 @@ android {
         }
 
         release {
-            resValue "string", "app_name", "TAPus"
+            resValue "string", "app_name", "Yoush"
             postprocessing {
                 // FIXME Set to true.
                 removeUnusedCode false

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Ultra safe adaptive icon configuration -->
+    <!-- Square icon centered in circle with maximum safe margins -->
+    <!-- Using 48dp to guarantee no detail loss on any device -->
+    <item android:drawable="@mipmap/ic_launcher_foreground"
+          android:gravity="center"
+          android:width="48dp"
+          android:height="48dp" />
+</layer-list>
