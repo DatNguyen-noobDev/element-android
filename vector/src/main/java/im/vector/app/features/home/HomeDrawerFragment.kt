@@ -63,7 +63,13 @@ class HomeDrawerFragment :
             if (user != null) {
                 avatarRenderer.render(user.toMatrixItem(), views.homeDrawerHeaderAvatarView)
                 views.homeDrawerUsernameView.text = user.displayName
-                views.homeDrawerUserIdView.text = user.userId
+                // Remove homeserver part to show only @username
+                val userId = if (user.userId.contains(":")) {
+                    user.userId.substringBefore(":")
+                } else {
+                    user.userId
+                }
+                views.homeDrawerUserIdView.text = userId
             }
         }
         // Profile

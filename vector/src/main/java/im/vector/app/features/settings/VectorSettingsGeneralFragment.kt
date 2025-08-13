@@ -235,7 +235,11 @@ class VectorSettingsGeneralFragment :
 
         // user account
         findPreference<VectorPreference>(VectorPreferences.SETTINGS_LOGGED_IN_PREFERENCE_KEY)!!
-                .summary = session.myUserId
+                .summary = if (session.myUserId.contains(":")) {
+                    session.myUserId.substringBefore(":")
+                } else {
+                    session.myUserId
+                }
 
         // homeserver
         findPreference<VectorPreference>(VectorPreferences.SETTINGS_HOME_SERVER_PREFERENCE_KEY)!!

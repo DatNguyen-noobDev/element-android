@@ -28,7 +28,15 @@ abstract class ContactDetailItem : VectorEpoxyModel<ContactDetailItem.Holder>(R.
         super.bind(holder)
         holder.view.onClick(clickListener)
         holder.nameView.text = threePid
-        holder.matrixIdView.setTextOrHide(matrixId)
+        // Remove homeserver part to show only @username
+        val displayMatrixId = matrixId?.let { id ->
+            if (id.contains(":")) {
+                id.substringBefore(":")
+            } else {
+                id
+            }
+        }
+        holder.matrixIdView.setTextOrHide(displayMatrixId)
     }
 
     class Holder : VectorEpoxyHolder() {

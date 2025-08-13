@@ -60,7 +60,13 @@ class MatrixToUserFragment :
             is Success -> {
                 views.matrixToCardUserContentVisibility.isVisible = true
                 views.matrixToCardNameText.setTextOrHide(item.invoke().displayName)
-                views.matrixToCardUserIdText.setTextOrHide(item.invoke().id)
+                // Remove homeserver part to show only @username
+                val userId = if (item.invoke().id.contains(":")) {
+                    item.invoke().id.substringBefore(":")
+                } else {
+                    item.invoke().id
+                }
+                views.matrixToCardUserIdText.setTextOrHide(userId)
                 avatarRenderer.render(item.invoke(), views.matrixToCardAvatar)
             }
             is Fail -> {

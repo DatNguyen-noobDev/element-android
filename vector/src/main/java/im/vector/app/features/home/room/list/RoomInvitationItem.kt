@@ -43,7 +43,8 @@ abstract class RoomInvitationItem : VectorEpoxyModel<RoomInvitationItem.Holder>(
         holder.rejectView.commonClicked = rejectListener
         InviteButtonStateBinder.bind(holder.acceptView, holder.rejectView, changeMembershipState)
         holder.titleView.text = matrixItem.getBestName()
-        holder.subtitleView.setTextOrHide(secondLine)
+        // Hide subtitle to remove @username:<homeServer> display
+        holder.subtitleView.visibility = android.view.View.GONE
         avatarRenderer.render(matrixItem, holder.avatarImageView)
     }
 

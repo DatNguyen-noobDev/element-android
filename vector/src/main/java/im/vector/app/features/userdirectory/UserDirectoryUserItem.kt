@@ -35,8 +35,13 @@ abstract class UserDirectoryUserItem : VectorEpoxyModel<UserDirectoryUserItem.Ho
         holder.view.onClick(clickListener)
         // Always hide userId and show only display name
         holder.userIdView.visibility = View.GONE
-        // If name is empty, use userId as name
-        holder.nameView.text = matrixItem.displayName ?: matrixItem.id
+        // If name is empty, use userId as name (without homeserver)
+        val userId = if (matrixItem.id.contains(":")) {
+            matrixItem.id.substringBefore(":")
+        } else {
+            matrixItem.id
+        }
+        holder.nameView.text = matrixItem.displayName ?: userId
         renderSelection(holder, selected)
     }
 

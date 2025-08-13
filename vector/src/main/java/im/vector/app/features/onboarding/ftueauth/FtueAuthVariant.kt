@@ -479,12 +479,36 @@ class FtueAuthVariant(
 
     private fun onAccountCreated() {
         activity.supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
-        // activity.replaceFragment(
-        //         views.loginFragmentContainer,
-        //         FtueAuthAccountCreatedFragment::class.java,
-        //         useCustomAnimation = true
-        // )
-        navigateToHome()
+        
+        // Check if personalization is enabled and user supports personalization
+        withState(onboardingViewModel) { state ->
+            if (vectorFeatures.isOnboardingPersonalizeEnabled() && state.personalizationState.supportsPersonalization()) {
+                // Navigate to profile personalization flow
+                when {
+                    state.personalizationState.supportsChangingDisplayName -> {
+                        activity.addFragmentToBackstack(
+                                views.loginFragmentContainer,
+                                FtueAuthChooseDisplayNameFragment::class.java,
+                                option = commonOption
+                        )
+                    }
+                    state.personalizationState.supportsChangingProfilePicture -> {
+                        activity.addFragmentToBackstack(
+                                views.loginFragmentContainer,
+                                FtueAuthChooseProfilePictureFragment::class.java,
+                                option = commonOption
+                        )
+                    }
+                    else -> {
+                        // Fallback to home if no personalization is supported
+                        navigateToHome()
+                    }
+                }
+            } else {
+                // Navigate to home if personalization is disabled or not supported
+                navigateToHome()
+            }
+        }
     }
 
     private fun navigateToHome() {
@@ -516,12 +540,7 @@ class FtueAuthVariant(
     }
 
     private fun onPersonalizationComplete() {
-        activity.supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
-        // activity.replaceFragment(
-        //         views.loginFragmentContainer,
-        //         FtueAuthPersonalizationCompleteFragment::class.java,
-        //         useCustomAnimation = true
-        // )
+        // Navigate directly to Home without showing intermediate screen
         navigateToHome()
     }
 

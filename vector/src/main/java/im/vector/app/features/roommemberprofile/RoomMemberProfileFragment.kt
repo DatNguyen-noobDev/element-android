@@ -220,7 +220,13 @@ class RoomMemberProfileFragment :
             is Success -> {
                 val userMatrixItem = asyncUserMatrixItem()
                 headerViews.memberProfileStateView.state = StateView.State.Content
-                headerViews.memberProfileIdView.text = userMatrixItem.id
+                // Remove homeserver part to show only @username
+                val userId = if (userMatrixItem.id.contains(":")) {
+                    userMatrixItem.id.substringBefore(":")
+                } else {
+                    userMatrixItem.id
+                }
+                headerViews.memberProfileIdView.text = userId
                 val bestName = userMatrixItem.getBestName()
                 headerViews.memberProfileNameView.text = bestName
                 headerViews.memberProfileNameView.setTextColor(matrixItemColorProvider.getColor(userMatrixItem))

@@ -207,20 +207,23 @@ class FtueAuthCombinedRegisterFragment :
                 Timber.d("setupUi: matrixId=$matrixId, homeServerUrl=$homeServerUrl")
                 
                 if (!matrixId.isNullOrEmpty()) {
+                    // Extract username from matrixId (remove homeserver part)
+                    val usernameOnly = if (matrixId.contains(":")) {
+                        matrixId.substringBefore(":")
+                    } else {
+                        matrixId
+                    }
                     getString(
                             CommonStrings.ftue_auth_create_account_username_entry_footer,
-                            matrixId
+                            usernameOnly
                     )
                 } else {
                     // Fallback if selectedMatrixId is null or empty
-                    if (!homeServerUrl.isNullOrEmpty()) {
-                        getString(
-                                CommonStrings.ftue_auth_create_account_username_entry_footer,
-                                "@username:${homeServerUrl.toReducedUrl()}"
-                        )
-                    } else {
-                        ""
-                    }
+                    // Only show username without homeserver for cleaner UI
+                    getString(
+                            CommonStrings.ftue_auth_create_account_username_entry_footer,
+                            "@username"
+                    )
                 }
             }
             else -> ""

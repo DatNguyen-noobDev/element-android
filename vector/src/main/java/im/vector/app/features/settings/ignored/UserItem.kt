@@ -40,7 +40,13 @@ abstract class UserItem : VectorEpoxyModel<UserItem.Holder>(R.layout.item_user) 
         holder.root.onClick(itemClickAction)
 
         avatarRenderer.render(matrixItem, holder.avatarImage)
-        holder.userIdText.setTextOrHide(matrixItem.id)
+        // Remove homeserver part to show only @username
+        val userId = if (matrixItem.id.contains(":")) {
+            matrixItem.id.substringBefore(":")
+        } else {
+            matrixItem.id
+        }
+        holder.userIdText.setTextOrHide(userId)
         holder.displayNameText.setTextOrHide(matrixItem.displayName)
     }
 

@@ -39,6 +39,14 @@ abstract class BaseProfileMatrixItem<T : ProfileMatrixItem.Holder>(@LayoutRes la
                 .takeIf { it != bestName }
                 // Special case for ThreePid fake matrix item
                 .takeIf { it != "@" }
+                ?.let { id ->
+                    // Remove homeserver part to show only @username
+                    if (id.contains(":")) {
+                        id.substringBefore(":")
+                    } else {
+                        id
+                    }
+                }
         holder.view.onClick(clickListener?.takeIf { editable })
         holder.titleView.text = bestName
         holder.subtitleView.setTextOrHide(matrixId)
