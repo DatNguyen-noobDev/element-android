@@ -6,7 +6,7 @@
     <!-- server urls -->
     <!-- <string name="matrix_org_server_url" translatable="false">https://matrix.org</string> -->
     <!-- <string name="matrix_org_server_url" translatable="false">https://yoush.dev.tapofthink.com</string> -->
-    <string name="matrix_org_server_url" translatable="false">https://matrix.demo.tapofthink.com</string>
+    <string name="matrix_org_server_url" translatable="false">https://yoush.chat.tapofthink.com</string>
     
     <!-- Rageshake configuration -->
     <string name="bug_report_url" translatable="false">https://riot.im/bugreports/submit</string>
@@ -20,10 +20,10 @@
 
     <!-- Note: pusher_http_url should have path '/_matrix/push/v1/notify' -->
     <!-- It is the push gateway for FCM embedded distributor -->
-    <string name="pusher_http_url" translatable="false">https://sygnal.demo.tapofthink.com/_matrix/push/v1/notify</string>
+    <string name="pusher_http_url" translatable="false">https://sygnal.chat.tapofthink.com/_matrix/push/v1/notify</string>
     <!-- Note: default_push_gateway_http_url should have path '/_matrix/push/v1/notify' -->
     <!-- It is the push gateway for UnifiedPush -->
-    <string name="default_push_gateway_http_url" translatable="false">https://sygnal.demo.tapofthink.com/_matrix/push/v1/notify</string>
+    <string name="default_push_gateway_http_url" translatable="false">https://sygnal.chat.tapofthink.com/_matrix/push/v1/notify</string>
     <!-- Note: pusher_app_id cannot exceed 64 chars -->
     <string name="pusher_app_id" translatable="false">com.tapofthink.yoush.android</string>
 

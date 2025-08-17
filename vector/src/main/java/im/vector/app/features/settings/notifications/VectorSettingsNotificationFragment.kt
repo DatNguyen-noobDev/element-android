@@ -195,7 +195,9 @@ class VectorSettingsNotificationFragment :
             }
         }
 
-        bindEmailNotifications()
+        //《 disable notification to email
+        //bindEmailNotifications()
+        // 》
         refreshBackgroundSyncPrefs()
 
         handleSystemPreference()

@@ -31,12 +31,12 @@ class HomeLayoutPreferencesStore @Inject constructor(
 
     val areRecentsEnabledFlow: Flow<Boolean> = context.dataStore.data
             // .map { preferences -> preferences[areRecentsEnbabled].orFalse() }
-            .map { preferences -> preferences[areRecentsEnbabled] ?: true } //《》
+            .map { preferences -> preferences[areRecentsEnbabled] ?: true } //《 Layout Recents 》
             .distinctUntilChanged()
 
     val areFiltersEnabledFlow: Flow<Boolean> = context.dataStore.data
             // .map { preferences -> preferences[areFiltersEnabled].orFalse() }
-            .map { preferences -> preferences[areFiltersEnabled] ?: true } // 《》
+            .map { preferences -> preferences[areFiltersEnabled] ?: true } // 《 Layout Filters 》
             .distinctUntilChanged()
 
     val isAZOrderingEnabledFlow: Flow<Boolean> = context.dataStore.data

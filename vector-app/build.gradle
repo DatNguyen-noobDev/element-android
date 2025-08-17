@@ -32,12 +32,12 @@ knit {
 }
 
 // Note: 2 digits max for each value
-ext.versionMajor = 1
-ext.versionMinor = 6
+ext.versionMajor = 8
+ext.versionMinor = 0
 // Note: even values are reserved for regular release, odd values for hotfix release.
 // When creating a hotfix, you should decrease the value, since the current value
 // is the value for the next regular release.
-ext.versionPatch = 44
+ext.versionPatch = 3
 
 static def getGitTimestamp() {
     def cmd = 'git show -s --format=%ct'
@@ -143,7 +143,7 @@ android {
     compileSdk versions.compileSdk
 
     defaultConfig {
-        applicationId "com.tapmedia.tapus"
+        applicationId "org.tap.media"
         // applicationId "im.vector.app"
         // Set to API 21: see #405
         minSdk versions.minSdk
@@ -179,7 +179,7 @@ android {
             // Configures multiple APKs based on ABI.
             abi {
                 // Enables building multiple APKs per ABI.
-                enable true
+                enable !gradle.startParameter.taskNames.any { it.contains('bundle') }
 
                 // By default all ABIs are included, so use reset() and include to specify that we only
                 // want APKs for armeabi-v7a, x86, arm64-v8a and x86_64.
@@ -237,16 +237,16 @@ android {
             storePassword System.env.ELEMENT_ANDROID_NIGHTLY_STOREPASSWORD ?: project.property("signing.element.nightly.storePassword")
         }
         release {
-            keyAlias 'my-key-alias'
-            keyPassword 'B4tLuuD4nh'
-            storeFile file("$rootDir/my-release-key.jks")
-            storePassword 'B4tLuuD4nh'
+            keyAlias 'tapmedia'
+            keyPassword 'hvpt5QhcLR5uEaq3qBzHngz2xGbc56UudmnRmtmZeOa1i1ZI43'
+            storeFile file("$rootDir/keystore.jks")
+            storePassword 'hvpt5QhcLR5uEaq3qBzHngz2xGbc56UudmnRmtmZeOa1i1ZI43'
         }
     }
 
     buildTypes {
         debug {
-            applicationIdSuffix ".debug"
+            // applicationIdSuffix ".debug"
             signingConfig signingConfigs.debug
             resValue "string", "app_name", "Yoush - dbg"
 

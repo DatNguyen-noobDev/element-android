@@ -1,6 +1,7 @@
 *.iml
 .gradle
 /local.properties
+keystore.jks
 # idea files: exclude everything except dictionnaries
 .idea/caches
 .idea/copilot

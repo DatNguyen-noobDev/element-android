@@ -76,19 +76,29 @@ class VectorSettingsHelpAboutFragment :
             }
         }
 
+        // 《 hidden SDK Version
         // SDK version
-        findPreference<VectorPreference>(VectorPreferences.SETTINGS_SDK_VERSION_PREFERENCE_KEY)!!.let {
-            it.summary = Matrix.getSdkVersion()
+        // findPreference<VectorPreference>(VectorPreferences.SETTINGS_SDK_VERSION_PREFERENCE_KEY)!!.let {
+        //     it.summary = Matrix.getSdkVersion()
 
-            it.setOnPreferenceClickListener { pref ->
-                copyToClipboard(requireContext(), pref.summary.orEmpty())
-                true
-            }
+        //     it.setOnPreferenceClickListener { pref ->
+        //         copyToClipboard(requireContext(), pref.summary.orEmpty())
+        //         true
+        //     }
+        // }
+        findPreference<VectorPreference>(VectorPreferences.SETTINGS_SDK_VERSION_PREFERENCE_KEY)?.apply {
+            isVisible = false
         }
+        // 》
 
+        // 《 hidden Crypto version
         // olm version
-        findPreference<VectorPreference>(VectorPreferences.SETTINGS_CRYPTO_VERSION_PREFERENCE_KEY)!!
-                .summary = Matrix.getCryptoVersion(true)
+        // findPreference<VectorPreference>(VectorPreferences.SETTINGS_CRYPTO_VERSION_PREFERENCE_KEY)!!
+        //         .summary = Matrix.getCryptoVersion(true)
+        findPreference<VectorPreference>(VectorPreferences.SETTINGS_CRYPTO_VERSION_PREFERENCE_KEY)?.apply {
+            isVisible = false
+        }
+        // 》
     }
 
     companion object {
