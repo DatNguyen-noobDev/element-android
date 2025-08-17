@@ -58,7 +58,7 @@ class FtueAuthSplashCarouselFragment :
     }
 
     override fun onDestroyView() {
-        tabLayoutMediator?.detach()
+        // tabLayoutMediator?.detach()
         tabLayoutMediator = null
         views.splashCarousel.adapter = null
         super.onDestroyView()
@@ -67,8 +67,9 @@ class FtueAuthSplashCarouselFragment :
     private fun setupViews() {
         val carouselAdapter = carouselController.adapter
         views.splashCarousel.adapter = carouselAdapter
-        tabLayoutMediator = TabLayoutMediator(views.carouselIndicator, views.splashCarousel) { _, _ -> }
-                .also { it.attach() }
+        // Disable TabLayoutMediator since we only have 1 slide and indicator is hidden
+        // tabLayoutMediator = TabLayoutMediator(views.carouselIndicator, views.splashCarousel) { _, _ -> }
+        //         .also { it.attach() }
 
         carouselController.setData(carouselStateFactory.create())
 
@@ -89,7 +90,8 @@ class FtueAuthSplashCarouselFragment :
                     "Branch: ${buildMeta.gitBranchName} ${buildMeta.gitRevision}"
             views.loginSplashVersion.debouncedClicks { navigator.openDebug(requireContext()) }
         }
-        views.splashCarousel.registerAutomaticUntilInteractionTransitions()
+        // Disable auto-rotation since we only have 1 slide now
+        // views.splashCarousel.registerAutomaticUntilInteractionTransitions()
     }
 
     private fun ViewPager2.registerAutomaticUntilInteractionTransitions() {
