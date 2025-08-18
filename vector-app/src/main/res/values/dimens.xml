@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default size for loading/splash logo -->
+    <dimen name="splash_logo_size">72dp</dimen>
+</resources>
+
+

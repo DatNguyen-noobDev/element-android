@@ -26,9 +26,11 @@ class LoadingFragment : VectorBaseFragment<FragmentLoadingBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val background = views.animatedLogoImageView.background
-        if (background is AnimationDrawable) {
-            background.start()
-        }
+        // 《 Turn of the animated logo
+        // val background = views.animatedLogoImageView.background
+        // if (background is AnimationDrawable) {
+        //     background.start()
+        // }
+        // 》
     }
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Larger logo size for tablets -->
+    <dimen name="splash_logo_size">96dp</dimen>
+</resources>
+
+

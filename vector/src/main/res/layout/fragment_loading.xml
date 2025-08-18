@@ -4,11 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--《 Disable the animated logo -->
     <ImageView
         android:id="@+id/animatedLogoImageView"
         android:layout_width="72dp"
         android:layout_height="72dp"
-        android:background="@drawable/riot_animated_logo"
+        android:src="@mipmap/my_logo"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
