@@ -3,15 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--《 Hidden layout preferences settings -->
     <item
         android:id="@+id/menu_home_layout_settings"
         android:title="@string/home_layout_preferences"
         android:visible="false" />
 
+    <!--《 Hidden Invite Friends -->
     <item
         android:id="@+id/menu_home_invite_friends"
         android:title="@string/invite_friends"
-        app:showAsAction="never" />
+        app:showAsAction="never"
+        android:visible="false" />
 
     <item
         android:id="@+id/menu_home_qr"

@@ -63,16 +63,18 @@ class UserListController @Inject constructor(
 
         // Build generic items
         if (currentState.searchTerm.isBlank()) {
-            if (currentState.showInviteActions()) {
-                actionItem {
-                    id(R.drawable.ic_share)
-                    title(host.stringProvider.getString(CommonStrings.invite_friends))
-                    actionIconRes(R.drawable.ic_share)
-                    clickAction {
-                        host.callback?.onInviteFriendClick()
-                    }
-                }
-            }
+            //《 Hidden Start chat/ Invite friends
+            // if (currentState.showInviteActions()) {
+            //     actionItem {
+            //         id(R.drawable.ic_share)
+            //         title(host.stringProvider.getString(CommonStrings.invite_friends))
+            //         actionIconRes(R.drawable.ic_share)
+            //         clickAction {
+            //             host.callback?.onInviteFriendClick()
+            //         }
+            //     }
+            // }
+            // 》
             if (currentState.showContactBookAction) {
                 actionItem {
                     id(R.drawable.ic_baseline_perm_contact_calendar_24)
