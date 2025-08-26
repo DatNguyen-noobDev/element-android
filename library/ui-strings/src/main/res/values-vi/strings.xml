@@ -2476,7 +2476,7 @@
     <string name="ftue_auth_create_account_username_entry_footer">Những người khác có thể tìm thấy bạn %s</string>
     <string name="ftue_auth_terms_title">Chính sách máy chủ</string>
     <string name="ftue_auth_reset_password_email_subtitle">%s sẽ gửi bạn một liên kết xác nhận</string>
-    <string name="ftue_auth_carousel_secure_title">Làm chủ cuộc trò chuyện.</string>
+    <string name="ftue_auth_carousel_secure_title">Làm chủ cuộc trò chuyện</string>
     <string name="ftue_auth_phone_subtitle">%s cần xác thực tài khoản của bạn</string>
     <string name="ftue_auth_welcome_back_title">Chào mừng trở lại!</string>
     <string name="ftue_auth_choose_server_sign_in_subtitle">Địa chỉ máy chủ của bạn là gì\?</string>
