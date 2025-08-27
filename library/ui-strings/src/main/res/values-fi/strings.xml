@@ -1967,7 +1967,7 @@
     <string name="ftue_auth_carousel_secure_body">Turvallista ja riippumatonta viestintää, joka on yhtä yksityistä kuin keskustelisit kasvokkain kotonasi.</string>
     <string name="ftue_auth_carousel_workplace_title">Viestintää tiimillesi.</string>
     <string name="ftue_auth_carousel_encrypted_title">Turvallista viestintää.</string>
-    <string name="ftue_auth_carousel_secure_title">Pidä keskustelusi hallussasi.</string>
+    <string name="ftue_auth_carousel_secure_title">Pidä keskustelusi hallussasi</string>
     <string name="ftue_auth_use_case_connect_to_server">Yhdistä palvelimeen</string>
     <string name="login_splash_already_have_account">Minulla on jo tili</string>
     <string name="login_splash_create_account">Luo tili</string>

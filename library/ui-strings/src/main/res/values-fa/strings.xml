@@ -2321,7 +2321,7 @@
     <string name="login_splash_already_have_account">از پیش حساب دارم</string>
     <string name="ftue_auth_carousel_encrypted_title">پیام‌رسانی امن.</string>
     <string name="ftue_auth_carousel_control_title">شما کنترل می‌کنید.</string>
-    <string name="ftue_auth_carousel_secure_title">صاحب گفت‌وگوهایتان باشید.</string>
+    <string name="ftue_auth_carousel_secure_title">صاحب گفت‌وگوهایتان باشید</string>
     <string name="tooltip_attachment_location">هم‌رسانی مکان</string>
     <string name="location_share_external">گشودن با</string>
     <string name="location_activity_title_preview">مکان</string>

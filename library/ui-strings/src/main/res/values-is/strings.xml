@@ -836,7 +836,7 @@
     <string name="show_advanced">Birta ítarlegt</string>
     <string name="soft_logout_clear_data_submit">Hreinsa öll gögn</string>
     <string name="login_reset_password_success_notice_2">Þú hefur verið skráður út úr öllum setum og munt ekki lengur fá ýti-tilkynningar. Til að endurvirkja tilkynningar, þarf að skrá sig aftur inn á hverju tæki fyrir sig.</string>
-    <string name="ftue_auth_carousel_secure_title">Eigðu samtölin þín.</string>
+    <string name="ftue_auth_carousel_secure_title">Eigðu samtölin þín</string>
     <string name="disconnect_identity_server">Aftengja auðkennisþjón</string>
     <string name="send_feedback_space_title">Umsagnir um svæði</string>
     <string name="settings_show_redacted_summary">Birta frátökutákn fyrir fjarlægð skilaboð</string>

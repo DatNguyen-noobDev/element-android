@@ -2310,7 +2310,7 @@
     <string name="login_splash_already_have_account">Kam tashmë një llogari</string>
     <string name="ftue_auth_carousel_encrypted_title">Shkëmbim i siguruar mesazhesh.</string>
     <string name="ftue_auth_carousel_control_title">Kontrollin e keni ju.</string>
-    <string name="ftue_auth_carousel_secure_title">Jini zot i bisedave tuaja.</string>
+    <string name="ftue_auth_carousel_secure_title">Jini zot i bisedave tuaja</string>
     <string name="tooltip_attachment_location">Jepe vendndodhjen</string>
     <string name="location_activity_title_preview">Vendndodhje</string>
     <string name="location_activity_title_static_sharing">Jepe vendndodhjen</string>

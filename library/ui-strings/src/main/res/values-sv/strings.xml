@@ -2321,7 +2321,7 @@
     <string name="login_splash_already_have_account">Jag har redan ett konto</string>
     <string name="ftue_auth_carousel_encrypted_title">Säkra meddelanden.</string>
     <string name="ftue_auth_carousel_control_title">Du har kontroll.</string>
-    <string name="ftue_auth_carousel_secure_title">Äg dina konversationer.</string>
+    <string name="ftue_auth_carousel_secure_title">Äg dina konversationer</string>
     <string name="room_error_access_unauthorized">Du får inte gå med i det här rummet</string>
     <string name="tooltip_attachment_location">Dela plats</string>
     <string name="location_share_external">Öppna med</string>

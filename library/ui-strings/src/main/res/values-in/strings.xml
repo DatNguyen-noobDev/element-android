@@ -2279,7 +2279,7 @@ Di masa mendatang proses verifikasi ini akan dimutakhirkan.</string>
     <string name="login_splash_already_have_account">Saya sudah punya akun</string>
     <string name="ftue_auth_carousel_encrypted_title">Perpesanan yang aman.</string>
     <string name="ftue_auth_carousel_control_title">Anda dalam kendali.</string>
-    <string name="ftue_auth_carousel_secure_title">Miliki percakapan Anda.</string>
+    <string name="ftue_auth_carousel_secure_title">Miliki percakapan Anda</string>
     <string name="tooltip_attachment_location">Bagikan lokasi</string>
     <string name="location_share_external">Buka dengan</string>
     <string name="location_not_available_dialog_content">${app_name} tidak dapat mengakses lokasi Anda. Silakan coba lagi nanti.</string>

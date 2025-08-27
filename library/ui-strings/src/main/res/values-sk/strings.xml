@@ -1438,7 +1438,7 @@
     <string name="disclaimer_title">Riot je teraz Element!</string>
     <string name="login_wait_for_email_title">Skontrolujte prosím svoj e-mail</string>
     <string name="poll_end_room_list_preview">Anketa skončila</string>
-    <string name="ftue_auth_carousel_secure_title">Vlastnite svoje konverzácie.</string>
+    <string name="ftue_auth_carousel_secure_title">Vlastnite svoje konverzácie</string>
     <string name="login_splash_already_have_account">Už mám účet</string>
     <string name="tooltip_attachment_file">Nahrať súbor</string>
     <string name="video_call_with_participant">Videohovor s %s</string>

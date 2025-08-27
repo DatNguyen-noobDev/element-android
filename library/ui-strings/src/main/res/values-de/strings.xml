@@ -2297,7 +2297,7 @@
     <string name="create_space_identity_server_info_none">Du verwendest derzeit keinen Identitäts-Server. Um Team-Mitglieder einzuladen und für sie auffindbar zu sein, konfiguriere zunächst einen.</string>
     <string name="login_splash_already_have_account">Ich habe bereits ein Konto</string>
     <string name="ftue_auth_carousel_encrypted_title">Sichere Kommunikation.</string>
-    <string name="ftue_auth_carousel_secure_title">Besitze deine Unterhaltungen.</string>
+    <string name="ftue_auth_carousel_secure_title">Besitze deine Unterhaltungen</string>
     <string name="identity_server_consent_dialog_content_3">Um bestehende Kontakte ermitteln zu können, musst du Kontaktinformationen (E-Mail-Adressen und Telefonnummern) an deinen Identitäts-Server übermitteln. Deine Daten werden als Streuwert (Hash) übermittelt, um den Datenschutz zu gewährleisten.</string>
     <string name="settings_discovery_consent_notice_off_2">Deine Kontakte sind privat. Um unter deinen Kontakten Matrix-Nutzer finden zu können, benötigen wir deine Erlaubnis, Kontaktinformationen an deinen Identitäts-Server zu übermitteln.</string>
     <string name="legals_no_policy_provided">Dieser Server stellt keine Richtlinie bereit.</string>

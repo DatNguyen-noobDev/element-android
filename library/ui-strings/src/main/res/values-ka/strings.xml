@@ -1973,7 +1973,7 @@
     <string name="room_join_rules_public_by_you">თქვენ გახადეთ ოთახი საჯარო მათთვის, ვისაც აქვს ლინკი.</string>
     <string name="room_join_rules_invite">%1$s გახადა ოთახი მხოლოდ მოწვევით ხელმისაწვდომი.</string>
     <string name="room_join_rules_invite_by_you">თქვენ გააკეთეთ ეს მხოლოდ მოწვევით.</string>
-    <string name="ftue_auth_carousel_secure_title">მართეთ თქვენი საუბრები.</string>
+    <string name="ftue_auth_carousel_secure_title">მართეთ თქვენი საუბრები</string>
     <string name="ftue_auth_carousel_secure_body">დაცული და დამოუკიდებელი კომუნიკაცია, რომელიც გთავაზობთ იმავე კონფიდენციალურობის დონეს, როგორც პირისპირ საუბარი თქვენს საკუთარ სახლში.</string>
     <string name="ftue_auth_carousel_control_body">აირჩიეთ, სად ინახება თქვენი საუბრები, გაძლევთ კონტროლსა და დამოუკიდებლობას. დაკავშირებულია Matrix-ის მეშვეობით.</string>
     <string name="ftue_auth_carousel_encrypted_body">ბოლო-ბოლო დაშიფრული და ტელეფონის ნომერი არ არის საჭირო. არც რეკლამები და არც მონაცემების მოპოვება.</string>

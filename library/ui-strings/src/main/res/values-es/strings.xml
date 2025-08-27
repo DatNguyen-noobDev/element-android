@@ -2264,7 +2264,7 @@
     <string name="ftue_auth_carousel_workplace_title">Mensajería para tu equipo.</string>
     <string name="ftue_auth_carousel_encrypted_title">Mensajería segura.</string>
     <string name="ftue_auth_carousel_control_title">Tú mandas.</string>
-    <string name="ftue_auth_carousel_secure_title">Toma el control de tus conversaciones.</string>
+    <string name="ftue_auth_carousel_secure_title">Toma el control de tus conversaciones</string>
     <string name="attachment_type_location">Ubicación</string>
     <string name="attachment_type_poll">Encuesta</string>
     <string name="identity_server_consent_dialog_content_question">¿Aceptas enviar esta información\?</string>

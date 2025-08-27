@@ -2257,7 +2257,7 @@
     <string name="ftue_auth_carousel_workplace_title">ຂໍ້ຄວາມສໍາລັບທີມງານຂອງທ່ານ.</string>
     <string name="ftue_auth_carousel_encrypted_title">ການສົ່ງຂໍ້ຄວາມທີ່ປອດໄພ.</string>
     <string name="ftue_auth_carousel_control_title">ທ່ານຄວບຄຸມໄດ້.</string>
-    <string name="ftue_auth_carousel_secure_title">ເປັນເຈົ້າຂອງບົດສົນທະນາຂອງທ່ານ.</string>
+    <string name="ftue_auth_carousel_secure_title">ເປັນເຈົ້າຂອງບົດສົນທະນາຂອງທ່ານ</string>
     <string name="timeline_unread_messages">ຂໍ້ຄວາມທີ່ຍັງບໍ່ໄດ້ອ່ານ</string>
     <string name="direct_room_join_rules_invite_by_you">ທ່ານເປັນຜູ້ເຊີນນີ້ເທົ່ານັ້ນ.</string>
     <string name="direct_room_join_rules_invite">%1$s ເຊີນນີ້ເທົ່ານັ້ນ.</string>

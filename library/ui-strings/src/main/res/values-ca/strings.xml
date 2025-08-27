@@ -2224,7 +2224,7 @@
     <string name="ftue_auth_carousel_secure_body">Comunicació segura i independent que t\'ofereix el mateix nivell de privadesa que una conversa cara a cara a casa teva.</string>
     <string name="ftue_auth_carousel_workplace_title">Missatgeria pel teu equip.</string>
     <string name="ftue_auth_carousel_encrypted_title">Missatges segurs.</string>
-    <string name="ftue_auth_carousel_secure_title">Ets propietari de les teves converses.</string>
+    <string name="ftue_auth_carousel_secure_title">Ets propietari de les teves converses</string>
     <string name="ftue_auth_carousel_control_title">Tu tens el control.</string>
     <string name="call_tile_voice_call_has_ended">Trucada finalitzada • %1$s</string>
     <string name="call_tile_video_active">Videotrucada activa</string>

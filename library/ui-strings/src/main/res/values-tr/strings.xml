@@ -1591,7 +1591,7 @@
     <string name="ftue_auth_carousel_secure_body">Size kendi evinizde yüz yüze görüşmeyle aynı düzeyde mahremiyet sağlayan güvenli ve bağımsız iletişim.</string>
     <string name="ftue_auth_carousel_encrypted_title">Güvenli mesajlaşma.</string>
     <string name="ftue_auth_carousel_control_title">Kontrol sende.</string>
-    <string name="ftue_auth_carousel_secure_title">Konuşmalarınıza sahip çıkın.</string>
+    <string name="ftue_auth_carousel_secure_title">Konuşmalarınıza sahip çıkın</string>
     <string name="direct_room_join_rules_invite_by_you">Bu daveti yalnızca siz yaptınız.</string>
     <string name="direct_room_join_rules_invite">%1$s bu daveti yalnızca yaptı.</string>
     <string name="room_join_rules_invite">%1$s odayı yalnızca davet etti.</string>

@@ -1906,7 +1906,7 @@
     <string name="ftue_auth_carousel_workplace_title">Žinučių siuntimas jūsų komandai.</string>
     <string name="ftue_auth_carousel_encrypted_title">Saugus žinučių siuntimas.</string>
     <string name="ftue_auth_carousel_control_title">Jūs viską kontroliuojate.</string>
-    <string name="ftue_auth_carousel_secure_title">Turėkite savo pokalbius.</string>
+    <string name="ftue_auth_carousel_secure_title">Turėkite savo pokalbius</string>
     <string name="timeline_unread_messages">Neperskaitytos žinutės</string>
     <string name="ftue_auth_use_case_skip">Dar nesate tikri\? %s</string>
     <string name="ftue_auth_use_case_option_three">Bendruomenės</string>

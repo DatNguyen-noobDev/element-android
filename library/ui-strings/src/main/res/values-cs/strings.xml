@@ -2367,7 +2367,7 @@
     <string name="login_splash_already_have_account">Již mám účet</string>
     <string name="ftue_auth_carousel_encrypted_title">Bezpečené zasílání zpráv.</string>
     <string name="ftue_auth_carousel_control_title">Máte vše pod kontrolou.</string>
-    <string name="ftue_auth_carousel_secure_title">Vlastněte své konverzace.</string>
+    <string name="ftue_auth_carousel_secure_title">Vlastněte své konverzace</string>
     <string name="tooltip_attachment_location">Sdílet polohu</string>
     <string name="location_share_external">Otevřít v</string>
     <string name="location_not_available_dialog_content">${app_name} nemohl získat přístup k vaší poloze. Zkuste to prosím později.</string>

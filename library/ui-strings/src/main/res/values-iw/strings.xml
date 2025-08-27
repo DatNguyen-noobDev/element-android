@@ -2306,7 +2306,7 @@
     <string name="ftue_auth_carousel_secure_body">תקשורת מאובטחת ועצמאית המעניקה לך את אותה רמת פרטיות כמו שיחה פנים אל פנים בבית שלך.</string>
     <string name="ftue_auth_carousel_workplace_title">הודעות לקבוצתך.</string>
     <string name="ftue_auth_carousel_control_title">אתה בשליטה.</string>
-    <string name="ftue_auth_carousel_secure_title">הבעלים של השיחות שלך.</string>
+    <string name="ftue_auth_carousel_secure_title">הבעלים של השיחות שלך</string>
     <string name="room_list_quick_actions_room_settings">הגדרות חדר</string>
     <string name="attachment_type_poll">סקר</string>
     <string name="error_file_too_big_simple">הקובץ גדול מדי להעלאה.</string>

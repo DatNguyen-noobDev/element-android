@@ -928,7 +928,7 @@
     <string name="ftue_auth_use_case_title">من أكثر من تحادثهم؟</string>
     <string name="ftue_auth_carousel_encrypted_title">مراسلات آمنة.</string>
     <string name="ftue_auth_carousel_control_title">أنت المتحكم.</string>
-    <string name="ftue_auth_carousel_secure_title">تحكم في محادثاتك.</string>
+    <string name="ftue_auth_carousel_secure_title">تحكم في محادثاتك</string>
     <string name="timeline_unread_messages">رسائل غير مقروءة</string>
     <string name="room_join_rules_invite_by_you">جعلتَ الغرفة للمدعووين فقط.</string>
     <string name="room_join_rules_invite">جعل %1$s الغرفة للمدعوين فقط.</string>

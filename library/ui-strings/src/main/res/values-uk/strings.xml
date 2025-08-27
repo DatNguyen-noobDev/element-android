@@ -2412,7 +2412,7 @@
     <string name="login_splash_already_have_account">Я вже маю обліковий запис</string>
     <string name="ftue_auth_carousel_encrypted_title">Захищене спілкування.</string>
     <string name="ftue_auth_carousel_control_title">Ви контролюєте все.</string>
-    <string name="ftue_auth_carousel_secure_title">Володійте своїми розмовами.</string>
+    <string name="ftue_auth_carousel_secure_title">Володійте своїми розмовами</string>
     <string name="tooltip_attachment_location">Поділитися місцем перебування</string>
     <string name="location_share_external">Відкрити за допомогою</string>
     <string name="location_not_available_dialog_content">${app_name} не може отримати доступ до вашого місцеперебування. Спробуйте пізніше.</string>
