@@ -2,15 +2,15 @@
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
     android:oneshot="false">
     <item
-        android:drawable="@mipmap/ic_launcher"
+        android:drawable="@drawable/new_logotype"
         android:duration="@integer/splash_animation_velocity" />
     <item
-        android:drawable="@mipmap/ic_launcher"
+        android:drawable="@drawable/new_logotype"
         android:duration="@integer/splash_animation_velocity" />
     <item
-        android:drawable="@mipmap/ic_launcher"
+        android:drawable="@drawable/new_logotype"
         android:duration="@integer/splash_animation_velocity" />
     <item
-        android:drawable="@mipmap/ic_launcher"
+        android:drawable="@drawable/new_logotype"
         android:duration="@integer/splash_animation_velocity" />
 </animation-list>

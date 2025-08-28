@@ -37,7 +37,7 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:importantForAccessibility="no"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/new_logotype"
             android:transitionName="loginLogoTransition" />
 
         <ImageView
@@ -46,8 +46,8 @@
             android:layout_height="44dp"
             android:layout_marginTop="8dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/element_logotype"
-            app:tint="?colorSecondary"
+            android:src="@drawable/new_logotype"
+            android:scaleType="fitCenter"
             tools:ignore="MissingPrefix" />
 
     </LinearLayout>
