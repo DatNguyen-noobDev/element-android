@@ -352,6 +352,16 @@ class WebRtcCallManager @Inject constructor(
 
     override fun onCallInviteReceived(mxCall: MxCall, callInviteContent: CallInviteContent) {
         Timber.tag(loggerTag.value).v("onCallInviteReceived callId ${mxCall.callId}")
+        // Reject any new incoming call if there is already an ongoing call
+        getCurrentCall()?.let {
+            Timber.tag(loggerTag.value).w("Incoming call ${mxCall.callId} rejected because another call is active")
+            try {
+                mxCall.reject()
+            } catch (failure: Throwable) {
+                Timber.tag(loggerTag.value).w(failure, "Failed to reject call ${mxCall.callId}")
+            }
+            return
+        }
         val nativeRoomId = callUserMapper?.nativeRoomForVirtualRoom(mxCall.roomId) ?: mxCall.roomId
         if (getCallsByRoomId(nativeRoomId).isNotEmpty()) {
             Timber.tag(loggerTag.value).w("you already have a call in this room")
