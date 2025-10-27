@@ -29,6 +29,7 @@ import im.vector.app.core.extensions.addFragmentToBackstack
 import im.vector.app.core.extensions.validateBackPressed
 import im.vector.app.core.platform.VectorBaseActivity
 import im.vector.app.core.utils.openUrlInChromeCustomTab
+import im.vector.app.core.utils.openUrlInExternalBrowser
 import im.vector.app.databinding.ActivityLoginBinding
 import im.vector.app.features.analytics.plan.MobileScreen
 import im.vector.app.features.home.HomeActivity
@@ -156,12 +157,10 @@ open class LoginActivity : VectorBaseActivity<ActivityLoginBinding>(), UnlockedA
                         option = commonOption
                 )
             is LoginViewEvents.OnWebLoginError -> onWebLoginError(loginViewEvents)
-            is LoginViewEvents.OnForgetPasswordClicked ->
-                addFragmentToBackstack(
-                        views.loginFragmentContainer,
-                        LoginResetPasswordFragment::class.java,
-                        option = commonOption
-                )
+            is LoginViewEvents.OnForgetPasswordClicked -> {
+                // Open forgot password URL in external browser
+                openUrlInExternalBrowser(this, "https://tapyoush.com/#/forgot_password")
+            }
             is LoginViewEvents.OnResetPasswordSendThreePidDone -> {
                 supportFragmentManager.popBackStack(FRAGMENT_LOGIN_TAG, POP_BACK_STACK_EXCLUSIVE)
                 addFragmentToBackstack(

@@ -28,6 +28,7 @@ import im.vector.app.core.extensions.replaceFragment
 import im.vector.app.core.platform.ScreenOrientationLocker
 import im.vector.app.core.platform.VectorBaseActivity
 import im.vector.app.core.resources.BuildMeta
+import im.vector.app.core.utils.openUrlInExternalBrowser
 import im.vector.app.databinding.ActivityLoginBinding
 import im.vector.app.features.VectorFeatures
 import im.vector.app.features.home.HomeActivity
@@ -157,11 +158,10 @@ class FtueAuthVariant(
                         option = commonOption
                 )
             is OnboardingViewEvents.OnWebLoginError -> onWebLoginError(viewEvents)
-            is OnboardingViewEvents.OnForgetPasswordClicked ->
-                when {
-                    vectorFeatures.isOnboardingCombinedLoginEnabled() -> addLoginStageFragmentToBackstack(FtueAuthResetPasswordEmailEntryFragment::class.java)
-                    else -> addLoginStageFragmentToBackstack(FtueAuthResetPasswordFragment::class.java)
-                }
+            is OnboardingViewEvents.OnForgetPasswordClicked -> {
+                // Open forgot password URL in external browser
+                openUrlInExternalBrowser(activity, "https://tapyoush.com/#/forgot_password")
+            }
             is OnboardingViewEvents.OnResetPasswordEmailConfirmationSent -> {
                 supportFragmentManager.popBackStack(FRAGMENT_LOGIN_TAG, FragmentManager.POP_BACK_STACK_INCLUSIVE)
                 when {
