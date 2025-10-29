@@ -159,7 +159,8 @@ open class LoginActivity : VectorBaseActivity<ActivityLoginBinding>(), UnlockedA
             is LoginViewEvents.OnWebLoginError -> onWebLoginError(loginViewEvents)
             is LoginViewEvents.OnForgetPasswordClicked -> {
                 // Open forgot password URL in external browser
-                openUrlInExternalBrowser(this, "https://tapyoush.com/#/forgot_password")
+                val forgotPasswordUrl = getString(im.vector.app.config.R.string.forgot_password_url)
+                openUrlInExternalBrowser(this, forgotPasswordUrl)
             }
             is LoginViewEvents.OnResetPasswordSendThreePidDone -> {
                 supportFragmentManager.popBackStack(FRAGMENT_LOGIN_TAG, POP_BACK_STACK_EXCLUSIVE)

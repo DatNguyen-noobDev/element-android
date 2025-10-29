@@ -160,7 +160,8 @@ class FtueAuthVariant(
             is OnboardingViewEvents.OnWebLoginError -> onWebLoginError(viewEvents)
             is OnboardingViewEvents.OnForgetPasswordClicked -> {
                 // Open forgot password URL in external browser
-                openUrlInExternalBrowser(activity, "https://tapyoush.com/#/forgot_password")
+                val forgotPasswordUrl = activity.getString(im.vector.app.config.R.string.forgot_password_url)
+                openUrlInExternalBrowser(activity, forgotPasswordUrl)
             }
             is OnboardingViewEvents.OnResetPasswordEmailConfirmationSent -> {
                 supportFragmentManager.popBackStack(FRAGMENT_LOGIN_TAG, FragmentManager.POP_BACK_STACK_INCLUSIVE)
